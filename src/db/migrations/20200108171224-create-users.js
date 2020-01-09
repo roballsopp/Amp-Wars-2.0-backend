@@ -7,8 +7,8 @@ module.exports = {
 				id uuid NOT NULL DEFAULT uuid_generate_v4(),
 				email citext NOT NULL UNIQUE,
 				password text NOT NULL,
-				firstName text NOT NULL,
-				lastName text NOT NULL,
+				first_name text NOT NULL,
+				last_name text NOT NULL,
 				created_at timestamp with time zone NOT NULL DEFAULT now(),
 				updated_at timestamp with time zone NOT NULL DEFAULT now(),
 				CONSTRAINT users_pkey PRIMARY KEY (id)

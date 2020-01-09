@@ -9,7 +9,7 @@ module.exports = {
 			const passwordHash = await bcrypt.hash(process.env.ADMIN_PASSWORD, 10);
 
 			await queryInterface.sequelize.query(
-				`INSERT INTO users (email, password, firstName, lastName) VALUES (:email, :password, :firstName, :lastName);`,
+				`INSERT INTO users (email, password, first_name, last_name) VALUES (:email, :password, :firstName, :lastName);`,
 				{
 					transaction,
 					replacements: {

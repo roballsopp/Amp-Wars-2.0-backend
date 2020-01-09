@@ -7,4 +7,12 @@ export default class UserModel {
 	async findById(id) {
 		return this.userTable.findOne({ where: { id } });
 	}
+
+	async findByEmailWithPassword(email) {
+		return this.userTable.unscoped().findOne({ where: { email } });
+	}
+
+	async findByEmail(email) {
+		return this.userTable.findOne({ where: { email } });
+	}
 }

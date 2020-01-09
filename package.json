@@ -5,8 +5,8 @@
   "author": "rallsopp06@gmail.com",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec babel-node src/",
-    "build": "babel src --out-dir build",
+    "start": "nodemon --exec babel-node src/server",
+    "build": "babel src/server --out-dir build",
     "model:generate": "sequelize model:generate",
     "migration:generate": "sequelize migration:generate",
     "db:migrate": "sequelize db:migrate",
